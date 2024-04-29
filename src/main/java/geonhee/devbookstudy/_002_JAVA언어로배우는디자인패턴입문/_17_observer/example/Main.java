@@ -1,0 +1,13 @@
+package geonhee.devbookstudy._002_JAVA언어로배우는디자인패턴입문._17_observer.example;
+
+public class Main {
+
+    public static void main(String[] args) {
+        NumberGenerator generator = new RandomNumberGenerator();
+        Observer observer1 = new DigitObserver();
+        Observer observer2 = new GraphObserver();
+        generator.addObserver(observer1);
+        generator.addObserver(observer2);
+        generator.execute();
+    }
+}
